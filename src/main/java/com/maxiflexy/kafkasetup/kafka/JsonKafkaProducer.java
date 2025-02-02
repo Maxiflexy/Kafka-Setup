@@ -22,7 +22,7 @@ public class JsonKafkaProducer {
 
         Message<User> message = MessageBuilder
                 .withPayload(data)
-                .setHeader(KafkaHeaders.TOPIC, "maxiflexy")
+                .setHeader(KafkaHeaders.TOPIC, "maxiflexy-json")
                 .build();
         kafkaTemplate.send(message);
     }

@@ -14,4 +14,11 @@ public class KafkaTopicConfig {
                 .name("maxiflexy")
                 .build();
     }
+
+    @Bean
+    public NewTopic myTopicJson(){
+        return TopicBuilder
+                .name("maxiflexy-json")
+                .build();
+    }
 }
