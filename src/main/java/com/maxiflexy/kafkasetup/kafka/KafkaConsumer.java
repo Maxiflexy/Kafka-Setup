@@ -12,6 +12,6 @@ public class KafkaConsumer {
 
     @KafkaListener(topics = "maxiflexy", groupId = "myGroup")
     public void consumeMessage(String message){
-        log.info("");
+        log.info("Message received: {}", message);
     }
 }
