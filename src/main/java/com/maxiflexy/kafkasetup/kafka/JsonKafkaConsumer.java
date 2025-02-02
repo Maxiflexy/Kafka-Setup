@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service;
 @Slf4j
 public class JsonKafkaConsumer {
 
-    @KafkaListener(topics = "maxiflexy-json", groupId = "myGroup")
+    @KafkaListener(topics = "${spring.kafka.topic-json.name}", groupId = "${spring.kafka.consumer.group-id}")
     public void consumeMessage(User user){
         log.info("Json message received! :  {}", user.toString());
     }
